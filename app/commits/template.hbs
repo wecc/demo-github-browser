@@ -1,0 +1,9 @@
+{{#if currentSha}}
+  <p>Selected commit: <strong>{{currentSha}}</strong></p>
+{{/if}}
+
+<ul>
+  {{#each commits as |commit|}}
+    {{commit-item commit=commit on-clicked=(action (mut currentSha))}}
+  {{/each}}
+</ul>

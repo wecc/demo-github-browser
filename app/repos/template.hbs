@@ -1,0 +1,5 @@
+<ul>
+  {{#each repos as |repo|}}
+    <li>{{link-to repo.fullName 'commits' repo.owner repo.name}}</li>
+  {{/each}}
+</ul>
